@@ -14,7 +14,7 @@ class Triangle
 
   def kind #returns type of triangle (equilateral, isosceles, or scalene). Raises custom error TriangleError if triangle is invalid
     validate
-    
+
   end
 
   def validate #checks to see if a triangle is valid, and raises TriangleError if not.
