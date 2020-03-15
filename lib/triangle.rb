@@ -23,16 +23,11 @@ class Triangle
     [side1, side2, side3].each do |side|
       valid_triangle << false if side <= 0
       raise TriangleError if valid_triangle.include?(false)
-    rescue TriangleError => error
-      puts error.message
     end
   end
 
   class TriangleError < StandardError
-   def message
-     "The supplied side lengths do not form a triangle!"
-   end
- end
+  end
 
 end
 
