@@ -1,16 +1,11 @@
 class Triangle
   attr_accessor :side1, :side2, :side3
-
-  sides = []
-
+  
   def initialize(side1, side2, side3)
     @side1 = side1
     @side2 = side2
     @side3 = side3
-    sides << side1
-    sides << side2
-    sides << side3
-  end
+    end
 
   def kind #returns type of triangle (equilateral, isosceles, or scalene). Raises custom error TriangleError if triangle is invalid
     validate
@@ -24,7 +19,8 @@ class Triangle
   end
 
   def validate #checks to see if a triangle is valid, and raises TriangleError if not.
-
+    valid_triangle = [(side1 + side2 > side3), (side1 + side3 > side2), (side2 + side3 > side1)]
+    [side1]
   end
 
   class TriangleError < StandardError
