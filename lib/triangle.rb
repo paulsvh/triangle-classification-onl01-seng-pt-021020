@@ -20,7 +20,10 @@ class Triangle
 
   def validate #checks to see if a triangle is valid, and raises TriangleError if not.
     valid_triangle = [(side1 + side2 > side3), (side1 + side3 > side2), (side2 + side3 > side1)]
-    [side1]
+    [side1, side2, side3].each do |side|
+      valid_triangle << false if side <= 0
+      raise TriangleError if valid_triangle.include?(false)
+    end
   end
 
   class TriangleError < StandardError
