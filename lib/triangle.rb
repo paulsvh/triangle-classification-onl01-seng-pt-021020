@@ -13,15 +13,12 @@ class Triangle
   end
 
   def kind #returns type of triangle (equilateral, isosceles, or scalene). Raises custom error TriangleError if triangle is invalid
-    if person.class != Person
-     begin
-       raise TriangleError
-     rescue TriangleError => error
-         puts error.message
-     end
-   else
+    validate
+    
+  end
 
-   end
+  def validate #checks to see if a triangle is valid, and raises TriangleError if not.
+
   end
 
   class TriangleError < StandardError
